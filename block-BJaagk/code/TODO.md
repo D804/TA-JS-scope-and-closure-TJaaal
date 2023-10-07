@@ -107,4 +107,7 @@ hello.user = 'Sam'; // valid
 
 9. What is higher order function explain with an example.
 
+<!-- In JavaScript, a higher-order function is a function that takes one or more functions as arguments, returns a function as its result,  -->
+
 10. Explain what is callback function. Why you can pass a function inside a function?
+<!-- Functions that Take Functions as Arguments is known as callback function -->
