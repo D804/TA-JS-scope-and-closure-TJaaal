@@ -26,7 +26,7 @@ var userMessage = sayHelloToUser('Bran');
 
 <!-- Put your image below -->
 
-![](../img/first1.PNG);
+![](../img/first11.png);
 
 2.
 
@@ -43,7 +43,7 @@ sayHi();
 
 <!-- Put your image below -->
 
-![](../img/Second2.PNG);
+![](../img/second22.png);
 
 3.
 
@@ -60,13 +60,13 @@ sayHi();
 
 <!-- Put your image below -->
 
-![](../img/third%203.PNG);
+![](../img/third33.png);
 
 4.
 
 ```js
-console.log(arr); // output
-console.log(username); // output
+console.log(arr); // undefined
+console.log(username); // undefined
 var usename = 'Sam';
 var arr = [1, 2, 3, 4, 5, 6];
 
@@ -74,5 +74,3 @@ function double(num) {
   return num * 2;
 }
 ```
-<!-- Put your image below -->
-![](../img/fourth4.PNG);
