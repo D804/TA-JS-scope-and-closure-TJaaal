@@ -73,7 +73,7 @@ function main() {
 }
 
 main();
-console.log(one, two, three, four); // One Two Error Error 
+console.log(one, two, three, four); // Error four is not defined.
 ```
 
 <!-- Put your image below -->
