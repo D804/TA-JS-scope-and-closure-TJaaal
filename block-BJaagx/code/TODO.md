@@ -19,6 +19,8 @@ function multiplyBy5(n) {
 let numbersAddedFive = multiplyArrayByN(marks, addFive);
 let numbersMultipliedBy5 = multiplyArrayByN(marks, multiplyBy5);
 ```
+![](../img/heigher1.png);
+<!-- multiplyArrayByN is a Heigher order function and addFive and multiplyBy5 is a callback function -->
 
 2. Create the execution context diagram of the above code snippet
 
@@ -26,7 +28,7 @@ let numbersMultipliedBy5 = multiplyArrayByN(marks, multiplyBy5);
 
 ```js
 function operation(n, opFn) {
-  // your code goes her
+  
 }
 // TEST
 console.log(
