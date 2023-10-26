@@ -1,6 +1,17 @@
 1. Create a function by your choice that accepts a callback function.
+```js
+ function getAdd(cb) {
+   
+}
 
+```
 2. Create a function by you choice that returns a function reference.
+```js
+ function getAdd(cb) {
+   return getAdd;
+}
+
+```
 
 3. Create a higher order function called `map` that takes two inputs:
    - An array of numbers/string/boolean etc
