@@ -12,7 +12,8 @@ function outer() {
 let getSum = outer();
 let num = getSum();
 ```
-
+<!-- output -->
+![](../img/closure1.png);
 2.
 
 Create the execution context diagram for following code. Also write the output of the code below.
@@ -33,6 +34,8 @@ counter(); // output
 counter(); // output
 counter(); // output
 ```
+<!-- output -->
+![](../img/clouser%202.png);
 
 3. Create the execution context diagram
 
