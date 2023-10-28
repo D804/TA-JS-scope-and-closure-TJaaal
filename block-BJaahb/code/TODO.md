@@ -52,5 +52,9 @@ let tomato = makeColorChanger('tomato');
 blue();
 tomato();
 
+
 // What will be the background color after the execution of last line
+background color will be tomato.
 ```
+<!-- output -->
+![](../img/clouser3.png);
