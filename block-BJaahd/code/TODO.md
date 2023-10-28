@@ -18,6 +18,7 @@ function getCounter() {
     },
   };
 };
+![](../img/closure1.png);
 
 let counter = getCounter()
 
@@ -52,6 +53,7 @@ function makeCounter() {
   }
 };
 
+![](../img/closureScope.png);
 let counter1 = makeCounter();
 let counter2 = makeCounter();
 
