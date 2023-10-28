@@ -18,16 +18,16 @@ function getCounter() {
     },
   };
 };
-![](../img/closure1.png);
+![](../img/extendclouser1.png);
 
 let counter = getCounter()
 
-counter.value();  // output
-counter.increment(); // output
-counter.increment(); // output
-counter.value(); // output
-counter.decrement(); // output
-counter.value(); // output
+counter.value();  // 0
+counter.increment(); // undefined
+counter.increment(); // undefined
+counter.value(); // 2
+counter.decrement(); // undefined
+counter.value(); // 1
 ```
 
 2. Create the execution context diagram and write the output.
@@ -53,17 +53,17 @@ function makeCounter() {
   }
 };
 
-![](../img/closureScope.png);
+![](../img/extendclouser2.png);
 let counter1 = makeCounter();
 let counter2 = makeCounter();
 
-console.log(counter1.value());  // OUTPUT
+console.log(counter1.value());  // 0
 
-counter1.increment();
-counter1.increment();
-console.log(counter1.value()); // OUTPUT
+counter1.increment();//undefined
+counter1.increment();//undefined
+console.log(counter1.value()); // 2
 
-counter1.decrement();
-console.log(counter1.value()); // OUTPUT
-console.log(counter2.value()); // OUTPUT
+counter1.decrement();//undefined
+console.log(counter1.value()); // 1
+console.log(counter2.value()); // 0
 ```
