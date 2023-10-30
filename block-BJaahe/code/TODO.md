@@ -3,24 +3,40 @@
 1. Write a function, `outer` that takes an input `string`. Inside the function `outer` define another function expression named `sayHello` which alerts the `input`. `sayHello` should be call immediately after it is defined.
 
 ```js
-// Your code goes here
+function outer (str) {
+    let sayHello = function () {
+        alert(sayHello());
+    }
+   
+}
+ outer("hello");
 ```
 
 2. Write a function `delay` that accepts two arguments, a callback and the wait for the time in milliseconds (1000 ms is 1 second). `delay` should return a function that, when invoked waits for the specified amount of time before executing. (Use setTimeout)
 
 ```js
-// Your code goes here
+function delay(time ,cb) {
+  return cb(time);
+}
+function setTimeOut (delayTime) {
+  return delayTime.setTimeout = 5000;
+}
+delay(console.log("Deep"),setTimeOut);
 ```
 
 3. Write a function with a closure. The first function should only take one argument, someone's last name, and return the inner function. The returned `inner` function should take one more argument, someone's first name. When inner function when called it should console.log both the first name and the last name with a space.
 
 ```js
-function lastName() {
-  //  Your code goes here
+function lastName(last) {
+  return function inner(first){
+    console.log(`${first} ${last}`);
+  }
+  
 }
+let lastNameLee = lastName('lee'); 
+lastNameLee('Brett');
 
-let lastNameLee = lastName('lee'); // logs nothing
-lastNameLee('Brett'); //logs 'Brett Lee'
+
 ```
 
 This function is useful in case you want to create name for multiple people with same last name.
@@ -28,7 +44,7 @@ This function is useful in case you want to create name for multiple people with
 ```js
 lastNameLee('Jane'); //logs 'Jane Lee'
 lastNameLee('Lynne'); //logs 'Lynne Lee'
-```
+``` 
 
 4. Create a `storyWriter` function that returns an object with two methods. One method, `addWords` adds a word to your story and returns the story while the other one, `erase`, resets the story back to an empty string. Here is an implementation:
 
@@ -54,7 +70,7 @@ storyOfMyLife.erase(); // ''
 When `forEach` function is called it returns another function. When the returned function is called it returns the element from the array at specific index. Every time you call the returned function the value of index should increment.
 
 ```js
-function forEach() {
+function forEach() { 
   // Your code goes here
 }
 
