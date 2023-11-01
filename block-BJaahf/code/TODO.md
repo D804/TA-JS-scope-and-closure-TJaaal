@@ -10,8 +10,9 @@
 **You can use normal for loop for this function**
 
 ```js
-function loop() {
-  // Your code goes here
+function loop(start,test,update,body) {
+  for(let i = start; test(i); update(i) )
+  body(i);
 }
 
 loop(
@@ -30,9 +31,14 @@ loop(
 Here's how it works. The function has an "accumulator value" which starts as the `initialValue` and accumulates the output of each loop. The array is iterated over, passing the accumulator and the next array element as arguments to the `callback`. The callback's return value becomes the new accumulator value. The next loop executes with this new accumulator value. In the example above, the accumulator begins at 0. `add(0,4)` is called. The accumulator's value is now 4. Then `add(4, 1)` to make it 5. Finally `add(5, 3)` brings it to 8, which is returned.
 
 ```js
-function reduce(array, callback, initialValue) {}
+function reduce(array, callback, initialValue) {
+let accumulator = initialValue;
+for(let i = 0; i<array.length; i++) {
+  accumulator = callback(accumulator,array[i]);
+}
+return accumulator;
+}
 
-// Test
 var nums = [4, 1, 3];
 var add = function (a, b) {
   return a + b;
@@ -45,11 +51,11 @@ reduce(nums, add, 0); //-> 8
 ```js
 function intersection(...arrays) {
     let referenceArray = arrays[0];
-    let result = referenceArray.filter((element) => {
-        return arrays.every((arr) => arr.includes(element));
-    });
-
-    return result;
+       for(let i = 1; i< arrays.length; i++) {
+        let second = arrays[i];
+       referenceArray =  referenceArray.filter(elm => second.includes(elm));
+       }
+    return referenceArray;
 }
 
 // Test
@@ -66,7 +72,12 @@ console.log(
 
 ```js
 function union(...arrays) {
-    return [...new Set([].concat(...arrays))];
+     let referanceArray  = arrays[0];
+     for(let i = 1; i< arrays.length; i++) {
+      let second = arrays[i];
+      referanceArray  = referanceArray.filter(elm => !second.includes(elm)).concat(second);
+     }
+     return referanceArray;
 }
 
 // Test
