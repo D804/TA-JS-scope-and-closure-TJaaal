@@ -3,7 +3,11 @@
 1. Write a function called `multiplyBy` that takes a `number` as an argument and returns a function. Returned function takes another `number` as an argument and returns the multiplication of both the numbers.
 
 ```js
-// Your code goes here
+function multiplyBy(number) {
+  return function (num) {
+    return number*num;
+  }
+}
 
 const double = multiplyBy(2);
 const final = double(15); // final should be 30
@@ -12,7 +16,11 @@ const final = double(15); // final should be 30
 2. Write a function called `fullName` that takes a string `firstName` as an argument and returns a function. Returned function takes another string `lastName` as an argument and returns full name.
 
 ```js
-// Your code goes here
+ function fullName (firstName) {
+     return function (lastName) {
+         return (`${firstname} ${lastName}`);
+     }
+ }
 
 const name = fullName('Will');
 const final = name('Smith'); // final should be "Will Smith"
@@ -30,12 +38,17 @@ isChild(21); // true
 isChild(45); // true
 isChild(103); // false
 ```
-
+ 
 4. Write a function call `letsWishThem` that take one parameter `string` called `greeting` and returns a function that takes another argument called `message`.
 
 ```js
 function letsWishThem(greeting) {
-  // your code goes here
+  function letsWishThem(string){
+     return function (message) {
+     
+     return (`${message} ${string}`);
+     }
+}
 }
 
 const callWithHey = letsWishThem('Hey');
@@ -48,7 +61,12 @@ callWithHello('How Are You?'); // Hello How Are You?
 
 ```js
 function addGame(gameName) {
-  // your code goes here
+  function addGame (string,currentScore) {
+    return function () {
+        
+        return  (`Score of basketball is(${currentScore+1})`);
+    }
+}
 }
 
 // Output
