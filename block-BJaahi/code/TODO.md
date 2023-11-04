@@ -303,12 +303,13 @@ let sum = add(num1, num2, 4, 5, 6);
 
 ```js
 // Declaration Phase
-let num1 = undefined;
-var sum2;
-let add;
 function addAgian(a, b) {
   return a + b;
 }
+let num1 = undefined;
+var sum2;
+let add;
+
 let num2;
 let sum;
 
@@ -377,10 +378,11 @@ function test(a) {
   let num1 = 21;
   return add(a, num1);
 }
-let sum;
 function add(a, b) {
   return a + b;
 }
+let sum;
+
 // Execution Phase
 sum = test(100);
 ```
