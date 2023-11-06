@@ -1,8 +1,15 @@
 1. Write a function that accepts a callback function and return another function. But the function should only be called once.
 
 ```js
-function once(cb) {
-  // your code goes here
+function once(callback) {
+    let called = false;
+
+    return function (...arrys) {
+        if (!called) {
+            called = true;
+            return callback(...arrys);
+        }
+    };
 }
 
 // TEST
@@ -48,7 +55,14 @@ log(); // return undefinde (can't be called twice)
 
 ```js
 function nTimes(cb, times, ...rest) {
-  // your code goes here
+    let count = 0;
+
+    return function () {
+        if (count < times) {
+            count++;
+            return cb(...rest);
+        }
+    };
 }
 
 // TEST
